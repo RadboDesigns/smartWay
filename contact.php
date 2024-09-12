@@ -227,7 +227,7 @@
 			</div>
 
 			<div class="contact-form">
-				<form action="sendMail.php" method="POST" autocomplete="off">
+				<form action="mail.php" method="POST" autocomplete="off">
 					<div class="row clearfix">
 						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
 							<label>Your Name</label>
@@ -471,21 +471,17 @@
 <script src="assets/js/color-settings.js"></script>
 <script src="assets/js/script.js"></script>
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-
 <!-- for Phpmail add the Link -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   var message = "<?-$_SESSION['status']?? ''; ?>";
   if(messageText != '') {
     Swal.fire({
-  title: "Thank you!",
-  text: messageText,
-  icon: "success",
-});
-<?php unset($_SESSION['status']); ?>
+		title: "Thank you!",
+		text: messageText,
+		icon: "success",
+	});
+		<?php unset($_SESSION['status']); ?>
   }
   
 </script>
